@@ -1,0 +1,24 @@
+.Top {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 48%;
+  width: 100%;
+  text-align: center;
+}
+
+.Bot {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  color: rgb(0, 0, 0);
+  font-size: 5cm;
+  position: absolute;
+  top: -10%;
+  width: 100%;
+  text-align: center;
+}
