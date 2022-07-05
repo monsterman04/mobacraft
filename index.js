@@ -1,0 +1,15 @@
+var urls = null;
+$.ajax({'async': false,'global': false,'url': "urls.json",'dataType': "json",'success': function (data) {urls = data;}});
+
+
+function find(_short){
+    for(var i = 0; i < urls.length; i++){
+        if(urls[i].short == _short){return urls[i].url;}
+    }
+    
+    return "https://monsterman04.github.io/";
+}
+
+//console.log(find("plugins"));
+console.log(window.location.pathname.split("/")[1]);
+
