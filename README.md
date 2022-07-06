@@ -3,7 +3,7 @@
 URL Shortener created by me :D<br/>
 Created for personal use<br/>
 
-~~-----------------------------~~
+~~‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ~~
 
 How it works:
 
