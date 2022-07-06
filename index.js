@@ -7,7 +7,7 @@ function find(_short){
         if(urls[i].short == _short){return urls[i].url;}
     }
     
-    return "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley";
+    return "https://monsterman04.github.io/";
 }
 
 console.log(find(window.location.pathname.split("/")[1]));
