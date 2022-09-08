@@ -4,10 +4,7 @@ $.ajax({'async': false,'global': false,'url': "urls.json",'dataType': "json",'su
 
 function find(_short){
     for(var i = 0; i < urls.length; i++){
-        if(urls[i].short == _short){
-            urls[i].visits++;
-            return urls[i].url;
-        }
+        if(urls[i].short == _short){return urls[i].url;}
     }
     
     return "https://monsterman04.github.io/";
