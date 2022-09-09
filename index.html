@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
     <title>monsterman04</title>
 
     <style>
-        .center{
+        #text{
             position: absolute;
             top: 50%;
-            width: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            font-size: xx-large;
+            font-size: 48px;
             color: #ffffff;
+            border-right: 2px solid #ffffff;
+            padding-right: 3px;
+            font-family: 'Poppins', sans-serif;
+            animation: blink 750ms steps(40) infinite;
+        }
+
+        @keyframes blink {
+            from, to{border-right-color: transparent;}
+            50%{border-right-color: #ffffff;}
         }
 
         body{
@@ -24,7 +35,7 @@
     </style>
 
 </head>
-<body>
-    <div class="center">URL not found!</div>
+<body onload="type()">
+    <div id="text"></div>
 </body>
 </html>

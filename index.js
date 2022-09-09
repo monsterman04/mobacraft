@@ -1,15 +1,11 @@
-var urls = null;
-$.ajax({'async': false,'global': false,'url': "urls.json",'dataType': "json",'success': function (data) {urls = data;}});
+var i = 0;
+var text = "Welcome to my page!";
+var speed = 200;
 
-
-function find(_short){
-    for(var i = 0; i < urls.length; i++){
-        if(urls[i].short == _short){return urls[i].url;}
+function type(){
+    if(i < text.length){
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
     }
-    
-    return "https://monsterman04.github.io/";
 }
-
-console.log(find(window.location.pathname.split("/")[1]));
-window.location.href = find(window.location.pathname.split("/")[1]);
-
