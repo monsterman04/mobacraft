@@ -4,38 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
+    <script src="JavaScript/index.js" defer></script>
+    <link rel="stylesheet" href="CSS/index.css">
     <title>monsterman04</title>
-
-    <style>
-        #text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 48px;
-            color: #ffffff;
-            border-right: 2px solid #ffffff;
-            padding-right: 3px;
-            font-family: 'Poppins', sans-serif;
-            animation: blink 750ms steps(40) infinite;
-        }
-
-        @keyframes blink {
-            from, to{border-right-color: transparent;}
-            50%{border-right-color: #ffffff;}
-        }
-
-        body{
-            background-color: #1f1f1f;
-            overflow-x: hidden;
-        }
-
-    </style>
-
 </head>
 <body onload="type()">
-    <div id="text"></div>
+    <div class="wrapper">
+        
+        <header>
+            <div class="background"></div>
+            <div id="text"></div>
+        </header>
+        
+        <div class="form-container">
+            <form>
+                <h3>Leave a message!</h3>
+                <input type="text" id="name" placeholder="Your name" required>
+                <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+    </div>
 </body>
 </html>

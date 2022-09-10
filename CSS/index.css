@@ -1,0 +1,120 @@
+.form-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background: #111111;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 2vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+form h3{
+    color:#ffff;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #1f1f1f;
+    font-size: 16px;
+    color:#ffff;
+}
+
+form textarea{
+    resize: vertical;
+    min-height: 75px;
+    max-height: 500px;
+}
+
+form input::placeholder, form textarea::placeholder{
+    color: #888888;
+}
+
+form button{
+    padding: 15px;
+    background: #1CA4B4;
+    color: #ffff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 10px auto 10px;
+    border-radius: 30px;
+}
+
+/*↑ Form - bottom page ↑*/
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 48px;
+    color: #ffffff;
+    white-space: nowrap;
+    border-right: 2px solid #ffffff;
+    padding-right: 3px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 5px 5px 1px #141414;
+    animation: blink 750ms steps(40) infinite;
+}
+
+@keyframes blink {
+    from, to{border-right-color: transparent;}
+    50%{border-right-color: #ffffff;}
+}
+
+body{
+    margin: 0;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background{
+    background-image: url(../Images/vvo1shj9vik91.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-9.7px) scale(2);
+}
+
