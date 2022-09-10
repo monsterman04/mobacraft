@@ -70,7 +70,7 @@ form button{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 48px;
+    font-size: min(52px, 8vw);
     color: #ffffff;
     white-space: nowrap;
     border-right: 2px solid #ffffff;
