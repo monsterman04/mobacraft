@@ -12,6 +12,11 @@ function type(){
 
 // ↑ Typewriter ↑
 
+function start(){
+    type();
+    getRandomPokemon();
+}
+
 // ↓ Form sender ↓
 
 let form = document.querySelector("form");
@@ -34,3 +39,47 @@ function onSubmit(data){
     form.reset();
     setTimeout(() => button.innerText = "Send", 5000);
 }
+
+// ↑ Form sender ↑
+
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+// ↓  Pokemon generator ↓
+
+function getPokemonExact(num){
+    return fetch("https://pokeapi.co/api/v2/pokemon/" + num)
+    .then(res => res.json())
+    .then(data => {
+        return data;
+    });
+}
+
+async function getRandomPokemon(){
+    const POKEMON_COUNT = 905;
+    const pokemon = await getPokemonExact(randomIntFromInterval(1, POKEMON_COUNT));
+    
+    
+    const name = document.getElementById("poke-name");
+    name.innerText = pokemon.name;
+
+    const weight = document.getElementById("poke-weight");
+    weight.innerText = "Weight: " + pokemon.weight;
+
+    const image = document.getElementById("poke-img");
+    image.alt = pokemon.name;
+    image.src = pokemon.sprites.other['official-artwork'].front_default;
+
+    const types = document.getElementById("poke-type");
+    let typeText = "";
+    for(let i = 0; i < pokemon.types.length; i++){
+        typeText += pokemon.types[i].type.name;
+        if(i != pokemon.types.length -1){typeText += ", ";}
+    }
+    if(pokemon.types.length > 1){
+        types.innerText = "Types: " + typeText;
+    }else{types.innerText = "Type: " + typeText;}
+}
+
+
